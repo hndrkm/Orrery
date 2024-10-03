@@ -18,6 +18,23 @@ function SceneOrrery() {
         <Orbit />
         <Orbit smA={1.18} oI={25.8} aP={162.6} oE={0.869} aN={240.3} />
         <NearEarthObject smA={1.18} oI={25.8} aP={162.6} oE={0.869} aN={240.3} period={2} />
+        <NearEarthObject 
+        smA={1.19} //a
+        oI={15.1} //i
+        aP={203.64} //w
+        oE={0.666} //e
+        aN={111.3} //node
+        mAe={100.47} //
+        period={6.64} //  
+        />
+        <Orbit smA={1.19} //a
+        oI={15.1} //i
+        aP={203.64} //w
+        oE={0.666} //e
+        aN={111.3} //node
+        mAe={100.47} //
+        period={6.64} //
+         />
         <NearEarthObject speed={3} radius={3} />
         <OrbitControls />
         <Stats showPanel={0} />

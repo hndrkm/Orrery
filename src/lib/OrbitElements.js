@@ -16,18 +16,19 @@ export function Propa(smA = 1, oI = 0.00005, aP = 102.94719, oE = 0.01671022, aN
 
     return point;
 }
-function trueToEccentricAnomaly(e, f) {
+export function trueToEccentricAnomaly(e, f) {
     var eccentricAnomaly = 2 * Math.atan(Math.sqrt((1 - e) / (1 + e)) * Math.tan(f / 2));
     return eccentricAnomaly;
 }
-function eccentricToTrueAnomaly(e, E) {
+export function eccentricToTrueAnomaly(e, E) {
     var trueAnomaly = 2 * Math.atan(Math.sqrt((1 + e) / (1 - e)) * Math.tan(E / 2));
     return trueAnomaly
 }
-function meanToEccentricAnomaly(e, M) {
-    var tol = 0.0001;  // tolerance
-    var eAo = M;       // initialize eccentric anomaly with mean anomaly
-    var ratio = 1;     // set ratio higher than the tolerance
+export function meanToEccentricAnomaly(e, M) {
+    var eccentricAnomaly
+    var tol = 0.0001;  // tolerancia
+    var eAo = M;       // iniciar anomalia excentrica con  media anomala
+    var ratio = 1;     // radio alto para la tolerancia
     while (Math.abs(ratio) > tol) {
         var f_E = eAo - e * Math.sin(eAo) - M;
         var f_Eprime = 1 - e * Math.cos(eAo);
